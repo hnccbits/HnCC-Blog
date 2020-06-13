@@ -1,0 +1,99 @@
+---
+---
+@import "main";
+
+.nav-link i{
+	font-size: 2.5em;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i|Rubik:500&display=swap');
+html{
+	font-family: 'Montserrat', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+body{
+	color: black;
+}
+
+.posts-list{
+	padding-left: 7%;
+	padding-right: 5%;
+	width: 88%;
+}
+
+.posts-list a{
+	color: #22186e;
+	font-family: 'Montserrat';
+}
+
+.posts-list p{
+	font-family: 'Montserrat';
+}
+
+.post-entry {
+	font-family: 'Montserrat'!important ;
+	font-size: .9em;
+}
+
+h2, h3, h4{
+	font-family: 'Rubik';
+	font-size: .7em;
+}
+
+.post-preview{
+	padding-top: 4em;
+}
+
+.blog-post{
+	color: black;
+	font-family: 'Montserrat';
+	font-size: .9em;
+}
+
+.blog-post h1,h2,h3{
+	font-family: 'Rubik';
+	font-size: ;
+}
+
+.blog-post{
+	padding-left: 7%;
+	padding-right: 5%;
+	width: 88%;
+}
+
+.newsletter{
+	height: 
+}
+
+.box{
+	margin-right: 1em;
+	background:none;
+	border:none;
+	border-bottom: .2em solid blue;
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+
+.box:hover{
+	border-bottom: .3em solid blue;
+	transition: .3s;
+}
+
+.sbbtn{
+	border-radius: 2em;
+	padding-left: 1.2em;
+	padding-right: 1.2em;
+	padding-top: .4em;
+	padding-bottom: .4em;
+
+	background:none;
+	border:.1em solid blue;
+	font-family: 'Rubik';
+}
+
+.sbbtn:hover{
+	background-color: orange;
+	transition: .3s;
+}

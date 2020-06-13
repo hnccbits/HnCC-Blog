@@ -1,0 +1,70 @@
+<footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+
+
+        <form class="newsletter" style="border:0px solid #ccc;padding:3px;text-align:center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=HnccBlog', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><h2 style="font-family:'Rubik'; font-size: 1.2em;">Subscribe to our newsletter</h2><input class="box" type="text" style="width:15em;" name="email" placeholder="Enter your email here" />
+          <input type="hidden" value="HnccBlog" name="uri"/><input type="hidden" name="loc" value="en_US"/>
+
+          <input class="sbbtn" type="submit" value="Subscribe"></form>
+
+
+          <br>
+
+        <ul class="list-inline text-center footer-links">
+          {%- for link in site.social-network-links -%}
+            {%- assign curkey = link[0] -%}
+            {%- assign element = site.data.SocialNetworks[curkey] -%}
+            <li>
+            {%- if curkey == 'rss' -%}
+              <a href="{{ '/feed.xml' | relative_url }}" title="{{ element.name }}">
+            {%- elsif curkey == 'yelp' -%}
+              <a href="https://{{ site.social-network-links[curkey] }}.yelp.com" title="{{ element.name }}">
+            {%- else -%}
+              <a href="{{element.baseURL}}{{ site.social-network-links[curkey] }}" title="{{ element.name }}">
+            {%- endif -%}
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa {{ element.icon }} fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">{{ element.name }}</span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      <p class="copyright text-muted">
+        <i class="fa fa-copyright"></i>
+      <a href="https://hnccbits.com" target="_blank">{{ site.author.name }}</a>
+      &nbsp;&bull;&nbsp;
+      {{ site.time | date: '%Y' }}
+
+      {% if site.url-pretty %}
+      &nbsp;&bull;&nbsp;
+      <a href="{{ '' | absolute_url }}">{{ site.url-pretty }}</a>
+      {% endif %}
+
+
+      &nbsp;&bull;&nbsp;
+      <a href="https://hnccbits.com/team.html" target="_blank">Team</a>
+
+      &nbsp;&bull;&nbsp;
+      <a href="https://www.linkedin.com/in/suraj-sloth/" target="_blank">Developer</a>
+
+      {% if site.matomo %}
+        {% if site.matomo.opt-out %}
+          &nbsp;&bull;&nbsp;
+          <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
+        {% endif %}
+      {% endif%}
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme based on
+      <a href="https://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
